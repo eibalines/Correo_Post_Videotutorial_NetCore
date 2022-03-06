@@ -20,10 +20,12 @@ namespace Correo_Post_Videotutorial_NetCore.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Index(string destinatario, string asunto, string mensaje)
+        public IActionResult Index(string receptor, string asunto, string texto)
         {
-            this.helpermail.SendMail(destinatario, asunto, mensaje);
-            ViewData["MENSAJE"] = "Mensaje enviado a '" + destinatario + "'";
+            string mensajefinal = "<h1>Proyecto Techclub Tajamar(MVC NetCore Correos)<h1/><h4>" + texto + " <h4/>"
+                                    ; 
+            this.helpermail.SendMail(receptor, asunto, mensajefinal);
+            ViewData["MENSAJE"] = "Mensaje enviado a '" + receptor + "'";
             return View();
         }
     }
