@@ -10,14 +10,14 @@ namespace Correo_Post_Videotutorial_NetCore.Controllers
 {
     public class CorreosController : Controller
     {
+        public IActionResult Index()
+        {
+            return View();
+        }
         private HelperMail helpermail;
         public CorreosController(HelperMail helpermail)
         {
             this.helpermail = helpermail;
-        }
-        public IActionResult Index()
-        {
-            return View();
         }
         [HttpPost]
         public IActionResult Index(string receptor, string asunto, string texto)

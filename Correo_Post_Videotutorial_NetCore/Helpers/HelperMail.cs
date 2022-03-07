@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
+using System.Net;
+using System.Net.Mail;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Mail;
 using System.Threading.Tasks;
 
 namespace Correo_Post_Videotutorial_NetCore.Helpers
